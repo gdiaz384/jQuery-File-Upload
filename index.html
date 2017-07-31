@@ -56,7 +56,7 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a href="//google.com">Main Page</a></li>
-                    <li><a href="//google.com">Downloads</a></li>
+                    <li><a href="server/php/files/">Downloads</a></li>
                     <li><a href="//github.com/blueimp/jQuery-File-Upload/wiki/Browser-support">Supported Browsers</a></li>
                 </ul>
             </div>
@@ -67,7 +67,7 @@
     <h2>File Uploader - Basic Plus UI</h2>
 
     <!-- The file upload form used as target for the file upload widget -->
-    <form id="fileupload" action="http://192.168.200.2/server/php/UploadHandler.php" method="POST" enctype="multipart/form-data">
+    <form id="fileupload" action="server/php/UploadHandler.php" method="POST" enctype="multipart/form-data">
 
         <!-- Redirect browsers with JavaScript disabled to the origin page -->
         <noscript><input type="hidden" name="redirect" value="//google.com"></noscript>
@@ -264,6 +264,8 @@
 <!--[if (gte IE 8)&(lt IE 10)]>
     <script src="js/jquery.xdr-transport.js"></script>
 <![endif]-->
+
+<script>document.getElementById("dl_url").innerHTML = "<a href=" + window.location.href+"server/php/files>"+"Downloads"+"</a>";</script>
 
 </body>
 </html>
